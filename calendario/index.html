@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<head>
+	<title>Sistema de gestión de centro de estética y pilates</title>
+	<link rel="stylesheet" href="_css/reset.css" />
+	<link rel="stylesheet" href="_css/style.css" />
+	<script type="text/javascript" src="_js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="_js/script.js"></script>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<div id="mainWrapper">
+		<!-- header -->
+		<header>
+			<div class="brand">
+				<a href="#"><img src="_img/logo.png" alt="Logo" /></a>
+			</div>
+			<nav id="mainMenu" class="right">
+				<ul class="inlineMenu">
+					<li>
+						<a href="#calendario" data-menuopt="calendarPilates"><i class="icon-calendar"></i>Pilates</a>
+					</li>
+					<li>
+						<a href="#calendario" data-menuopt="calendarKinesio"><i class="icon-calendar"></i>Estética</a>
+					</li>
+					<li>
+						<a href="#lista" data-menuopt="peopleList"><i class="icon-list"></i>Personas</a>
+					</li>
+					<li>
+						<a href="#config" data-menuopt="configuration"><i class="icon-config"></i>Configuración</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- /header -->
+					<!-- Home -->
+			<div id="home" class="page">
+				<div class="column2 pilatesIntro">
+					<a href="#calendarPilates">
+						<h2>Pilates</h2>
+					</a>
+				</div>
+				<div class="column2 kinesioIntro">
+					<a href="#calendarKinesio">
+						<h2>Estética</h2>
+					</a>
+				</div>
+			</div>
+			<!-- /Home -->
+		<div class="content">
+			<!-- persons -->
+			<div id="person" class="page hide">
+				<div class="row">
+					<h2>Jane Doe</h2>
+					<ul class="tools inlineMenu">
+						<li><a href="#" class="btn">Ver turnos</a></li>
+						<li><a href="#" class="btn alert">Eliminar</a></li>
+					</ul>
+					<!-- Personal info -->
+					<div class="column3">
+						<div id="personalInfo">
+							<h2>Información Personal</h2>
+							<dl>
+								<dt>Nombre</dt>
+								<dd>Jane</dd>
+								<dt>Apellido</dt>
+								<dd>Doe</dd>
+								<dt>Edad</dt>
+								<dd>29</dd>
+								<dt>Fecha de nacimiento</dt>
+								<dd>29/04/1984</dd>
+							</dl>
+							<h3>Datos de Contacto</h3>
+							<dl>
+								<dt>Celular</dt>
+								<dd>156-112233</dd>
+								<dt>Email</dt>
+								<dd>jane@gmail.com</dd>
+								<dt>Teléfono Fijo</dt>
+								<dd>444-2211</dd>
+							</dl>
+							<a href="#" class="btn" data-sectionToggle='editPerson'>Editar</a>
+						</div>
+						<div id="editPerson">
+							<h2>Editar: <span id="personId">Jane Doe</span></h2>
+							<form action="#" id="personEditor">
+								<fieldset>
+									<legend>Datos personales</legend>
+									<label for="name">Nombre</label>
+									<input type="text" id="name" name="name" required />
+									<label for="lastName">Apellido</label>
+									<input type="text" id="lastName" name="lastName" required />
+									<label for="dob">Fecha de nacimiento</label>
+									<input type="date" id="dob" name="dob" />
+								</fieldset>
+								<fieldset>
+									<legend>Datos de contacto</legend>
+									<label for="mobile">Teléfono celular</label>
+									<input type="tel" id="mobile" name="mobile" required/>
+									<label for="email">Email</label>
+									<input type="email" id="email" name="email" />
+									<label for="phone">Otro teléfono</label>
+									<input type="tel" id="phone" name="phone" />
+								</fieldset>
+								<fieldset>
+									<legend>Actividades</legend>
+									<label for="personPilates"><input type="checkbox" id="personPilates" name="personPilates" />Pilates</label>
+									<div class="pilatesOptions">
+										<label for="pilates1Week"><input type="radio" id="pilates1Week" name="pilates1Week" />1 vez por semana</label>
+										<label for="pilates2Week"><input type="radio" id="pilates2Week" name="pilates2Week" />2 veces por semana</label>
+										<label for="pilates3Week"><input type="radio" id="pilates3Week" name="pilates3Week" />3 veces por semana</label>
+									</div>
+									<label for="personKinesio"><input type="checkbox" id="personKinesio" name="personKinesio" />Tratamientos</label>
+									<div class="kinesioOptions">
+										<label for="combo1"><input type="checkbox" id="combo1" name="combo1" />Combo 1: Ondas Rusas + Radiofrecuencia x 4</label>
+										<label for="combo2"><input type="checkbox" id="combo2" name="combo2" />Combo 1: Ondas Rusas + Radiofrecuencia x 10</label>
+										<label for="ondasRusas"><input type="checkbox" id="ondasRusas" name="ondasRusas" />Ondas Rusas</label>
+									</div>
+								</fieldset>
+								<button type="submit" id="saveChanges" name="saveChanges">Guardar</button>
+							</form>
+						</div>
+					</div>
+					<!-- /Personal info -->
+					<!-- Fisical condition -->
+					<div id="kinesio" class="column3">
+						<h2>Condición física</h2>
+						<section>
+							<h1>Problemas médicos</h1>
+							<span class="fecha">20/04/2013</span>
+							<p>Ninguno</p>
+						</section>
+						<section>
+							<h1>Medidas</h1>
+							<table>
+								<thead>
+									<tr>
+										<th>Medida</th>
+										<th>Abril 13</th>
+										<th>Mayo 13</th>
+										<th>Junio 13</th>
+									</tr>	
+								</thead>
+								<tbody>
+									<tr>
+										<td class="def">Cintura</td>
+										<td>63</td>
+										<td>62.3</td>
+										<td>61</td>
+									</tr>
+									<tr>
+										<td class="def">Cadera</td>
+										<td>105</td>
+										<td>102</td>
+										<td>97</td>
+									</tr>
+									<tr>
+										<td class="def">Cola</td>
+										<td>98</td>
+										<td>99</td>
+										<td>97</td>
+									</tr>
+									<tr>
+										<td class="def">Muslo der</td>
+										<td>54</td>
+										<td>53</td>
+										<td>53</td>
+									</tr>
+									<tr>
+										<td class="def">Muslo izq</td>
+										<td>55</td>
+										<td>54</td>
+										<td>52</td>
+									</tr>
+								</tbody>
+							</table>
+						</section>
+					</div>
+					<!-- /Fisical condition -->
+					<!-- Payments -->
+					<div id="payments" class="column3">
+						<h2>Pagos</h2>
+						<table>
+							<thead>
+								<tr>
+									<th>Fecha</th>
+									<th>Detalle</th>
+									<th>Monto</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>29/07/2013</td>
+									<td>Pilates</td>
+									<td>$210</td>
+								</tr>
+								<tr>
+									<td>29/07/2013</td>
+									<td>Limpieza de cutis</td>
+									<td>$80</td>
+								</tr>
+								<tr>
+									<td>29/07/2013</td>
+									<td>Radiofrecuencia + cavitación</td>
+									<td>$410</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td></td>
+									<td>Total</td>
+									<td>$352.08</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					<!-- /Payments -->
+				</div>
+				<!-- History -->
+				<div id="history">
+					<h2>Historial</h2>
+					<ul>
+						<li><span class="date">11/2/12</span> Inicio de pilates</li>
+						<li><span class="date">11/3/12</span> Inicio tratamiento ondas rusas + ultracavitación</li>
+					</ul>
+				</div>
+				<!-- /History -->
+			</div>
+			<!-- /Persons -->
+			<!-- Calendars -->
+			<div id="calendarApp" class="page hide">
+				<h2>Calendario - <span id="calFor">Pilates</span></h2>
+				<div class="calendarWrapper">
+					<!-- tools -->
+					<div class="tableTools">
+						<ul class="calControl inlineMenu">
+							<li><a href="#" class="controls prev">Anterior</a></li>
+							<li><a href="#" class="controls next">Siguiente</a></li>
+						</ul>
+						<h3>Septiembre 2013</h3>
+						<ul class="tools inlineMenu right">
+							<li><a href="#">Día</a></li>
+							<li class="active"><a href="#">Semana</a></li>
+							<li><a href="#">Horarios Disponibles</a></li>
+						</ul>
+					</div>
+					<!-- /tools -->
+					<form id="pilatesAssistance">
+						<table id="calendar">
+							<thead>
+								<tr>
+									<th>Hora</th>
+									<th>Lunes 16/09</th>
+									<th>Martes 17/09</th>
+									<th>Miércoles 18/09</th>
+									<th>Jueves 19/09</th>
+									<th>Viernes 20/09</th>
+									<th>Sábado 21/09</th>
+									<th>Domingo 22/09</th>
+								</tr>	
+							</thead>
+							<tbody>
+								<!-- complete week hour -->
+								<tr>
+									<td class="hour">9 AM</td>
+									<!-- Day -->
+									<td>
+										<ol>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Marina</a> <span>(5/16)</span>
+													<input type="checkbox" id="presente1" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Alejandra</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente2" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Verónica</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente3" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Gustavo</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente4" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#add" title="Agregar Alumno">Libre</a>
+													<input type="checkbox" id="presente5" disabled />
+												</div>
+											</li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Soledad</a></li>
+											<li><a href="#">Marianela</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Marina</a> <span>(5/16)</span>
+													<input type="checkbox" id="presente6" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Alejandra</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente7" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Verónica</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente8" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Gustavo</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente9" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#add" title="Agregar Alumno">Libre</a>
+													<input type="checkbox" id="presente10" disabled />
+												</div>
+											</li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Beatriz</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li>
+												<div class="personModule">
+													<a href="#" title="Editar Alumno">Marina</a> <span>(5/16)</span>
+													<input type="checkbox" id="presente11" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#" title="Editar Alumno">Alejandra</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente12" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#" title="Editar Alumno">Verónica</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente13" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#" title="Editar Alumno">Gustavo</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente14" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#" title="Agregar Alumno">Libre</a>
+													<input type="checkbox" id="presente15" disabled />
+												</div>
+											</li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="noWork"></td>
+									<!-- /Day -->
+								</tr>
+								<!-- /complete week hour -->
+								<!-- complete week hour -->
+								<tr>
+									<td class="hour">10 AM</td>
+									<!-- Day -->
+									<td>
+										<ol>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Marina</a> <span>(5/16)</span>
+													<input type="checkbox" id="presente16" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Alejandra</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente17" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Verónica</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente18" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Gustavo</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente19" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#add" title="Agregar Alumno">Libre</a>
+													<input type="checkbox" id="presente20" disabled />
+												</div>
+											</li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Soledad</a></li>
+											<li><a href="#">Marianela</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Gustavo</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Beatriz</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="unavailable disabled">
+										HORARIO NO HABILITADO
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="noWork"></td>
+									<!-- /Day -->
+								</tr>
+								<!-- /complete week hour -->
+								<!-- complete week hour -->
+								<tr>
+									<td class="hour">11 AM</td>
+									<!-- Day -->
+									<td>
+										<ol>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Marina</a> <span>(5/16)</span>
+													<input type="checkbox" id="presente21" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Alejandra</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente22" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Verónica</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente23" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Gustavo</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente24" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#add" title="Agregar Alumno">Libre</a>
+													<input type="checkbox" id="presente25" disabled />
+												</div>
+											</li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Soledad</a></li>
+											<li><a href="#">Marianela</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Gustavo</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Beatriz</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="unavailable disabled">
+										HORARIO NO HABILITADO
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="noWork"></td>
+									<!-- /Day -->
+								</tr>
+								<!-- /complete week hour -->
+								<!-- complete week hour -->
+								<tr>
+									<td class="hour">12 AM</td>
+									<!-- Day -->
+									<td>
+										<ol>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Marina</a> <span>(5/16)</span>
+													<input type="checkbox" id="presente25423" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Alejandra</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente26" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Verónica</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente27" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Gustavo</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente28" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#add" title="Agregar Alumno">Libre</a>
+													<input type="checkbox" id="presente29" disabled />
+												</div>
+											</li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="unavailable disabled">
+										HORARIO NO HABILITADO
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Gustavo</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="unavailable disabled">
+										HORARIO NO HABILITADO
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="unavailable disabled">
+										HORARIO NO HABILITADO
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="noWork"></td>
+									<!-- /Day -->
+								</tr>
+								<!-- /complete week hour -->
+								<!-- complete week hour -->
+								<tr>
+									<td class="hour">4 PM</td>
+									<!-- Day -->
+									<td>
+										<ol>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Marina</a> <span>(5/16)</span>
+													<input type="checkbox" id="presente30" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Alejandra</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente31" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Verónica</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente32" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Gustavo</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente33" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#add" title="Agregar Alumno">Libre</a>
+													<input type="checkbox" id="presente34" disabled />
+												</div>
+											</li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Soledad</a></li>
+											<li><a href="#">Marianela</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Gustavo</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Beatriz</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="unavailable disabled">
+										HORARIO NO HABILITADO
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="noWork"></td>
+									<!-- /Day -->
+								</tr>
+								<!-- /complete week hour -->
+								<!-- complete week hour -->
+								<tr>
+									<td class="hour">5 PM</td>
+									<!-- Day -->
+									<td>
+										<ol>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Marina</a> <span>(5/16)</span>
+													<input type="checkbox" id="presente35" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Alejandra</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente36" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Verónica</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente37" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Gustavo</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente38" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#add" title="Agregar Alumno">Libre</a>
+													<input type="checkbox" id="presente39" disabled />
+												</div>
+											</li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Soledad</a></li>
+											<li><a href="#">Marianela</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Gustavo</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Beatriz</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="unavailable disabled">
+										HORARIO NO HABILITADO
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="noWork"></td>
+									<!-- /Day -->
+								</tr>
+								<!-- /complete week hour -->
+								<!-- complete week hour -->
+								<tr>
+									<td class="hour">6 PM</td>
+									<!-- Day -->
+									<td>
+										<ol>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Marina</a> <span>(5/16)</span>
+													<input type="checkbox" id="presente40" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Alejandra</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente41" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Verónica</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente42" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Gustavo</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente43" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#add" title="Agregar Alumno">Libre</a>
+													<input type="checkbox" id="presente44" disabled />
+												</div>
+											</li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Soledad</a></li>
+											<li><a href="#">Marianela</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Gustavo</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Beatriz</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="unavailable disabled">
+										HORARIO NO HABILITADO
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="noWork"></td>
+									<!-- /Day -->
+								</tr>
+								<!-- /complete week hour -->
+								<!-- complete week hour -->
+								<tr>
+									<td class="hour">7 PM</td>
+									<!-- Day -->
+									<td>
+										<ol>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Marina</a> <span>(5/16)</span>
+													<input type="checkbox" id="presente45" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Alejandra</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente46" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Verónica</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente47" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#edit" title="Editar Alumno">Gustavo</a> <span>(1/4)</span>
+													<input type="checkbox" id="presente48" />
+												</div>
+											</li>
+											<li>
+												<div class="personModule">
+													<a href="#add" title="Agregar Alumno">Libre</a>
+													<input type="checkbox" id="presente49" disabled />
+												</div>
+											</li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Soledad</a></li>
+											<li><a href="#">Marianela</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Gustavo</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Juana</a></li>
+											<li><a href="#">Beatriz</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td>
+										<ol>
+											<li><a href="#">Marina</a></li>
+											<li><a href="#">Alejandra</a></li>
+											<li><a href="#">Verónica</a></li>
+											<li><a href="#">Libre</a></li>
+											<li><a href="#">Libre</a></li>
+										</ol>
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="unavailable disabled">
+										HORARIO NO HABILITADO
+									</td>
+									<!-- /Day -->
+									<!-- Day -->
+									<td class="noWork"></td>
+									<!-- /Day -->
+								</tr>
+								<!-- /complete week hour -->
+							</tbody>
+						</table>
+					</form>
+				</div>
+			</div>
+			<!-- /Calendars -->
+			<!-- Persons List -->
+			<div id="personsList" class="page hide">
+				<h2>Directorio</h2>
+				<div class="tableTools">
+					<ul class="inlineMenu">
+						<li>Filtros: </li>
+						<li><a href="#">Pilates</a></li>
+						<li><a href="#">Estética</a></li>
+						<li><a href="#">Inactivos</a></li>
+						<li><a href="#">Archivo</a></li>
+						<li><a href="#">Todos</a></li>
+					</ul>
+				</div>
+				<table class="peopleDirectory">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Apelido</th>
+							<th>Teléfono</th>
+							<th>Email</th>
+							<th>Activo</th>
+							<th>Opciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Person IN list -->
+						<tr class="inactive">
+							<td>Jane</td>
+							<td>Doe</td>
+							<td>156-112233</td>
+							<td><a href="mailto:jane@gmail.com">jane@gmail.com</a></td>
+							<td>no</td>
+							<td>
+								<ul class="personOptions inlineMenu">
+									<li><a href="#view" class="btn" data-personAction="view">Ver</a></li>
+									<li><a href="#edit" class="btn" data-personAction="edit">Editar</a></li>
+									<li><a href="#archive" class="btn" data-personAction="archive">Archivar</a></li>
+									<li><a href="#remove" class="btn" data-personAction="remove">Eliminar</a></li>
+								</ul>
+							</td>
+						</tr>
+						<!-- /Person IN list -->
+						<!-- Person IN list -->
+						<tr>
+							<td>Jane</td>
+							<td>Doe</td>
+							<td>156-112233</td>
+							<td><a href="mailto:jane@gmail.com">jane@gmail.com</a></td>
+							<td>Pilates</td>
+							<td>
+								<ul class="personOptions inlineMenu">
+									<li><a href="#" class="btn" data-personAction="view">Ver</a></li>
+									<li><a href="#" class="btn" data-personAction="edit">Editar</a></li>
+									<li><a href="#" class="btn" data-personAction="archive">Archivar</a></li>
+									<li><a href="#" class="btn" data-personAction="remove">Eliminar</a></li>
+								</ul>
+							</td>
+						</tr>
+						<!-- /Person IN list -->
+						<!-- Person IN list -->
+						<tr>
+							<td>Jane</td>
+							<td>Doe</td>
+							<td>156-112233</td>
+							<td><a href="mailto:jane@gmail.com">jane@gmail.com</a></td>
+							<td>Estética</td>
+							<td>
+								<ul class="personOptions inlineMenu">
+									<li><a href="#" class="btn" data-personAction="view">Ver</a></li>
+									<li><a href="#" class="btn" data-personAction="edit">Editar</a></li>
+									<li><a href="#" class="btn" data-personAction="archive">Archivar</a></li>
+									<li><a href="#" class="btn" data-personAction="remove">Eliminar</a></li>
+								</ul>
+							</td>
+						</tr>
+						<!-- /Person IN list -->
+						<!-- Person IN list -->
+						<tr>
+							<td>Jane</td>
+							<td>Doe</td>
+							<td>156-112233</td>
+							<td><a href="mailto:jane@gmail.com">jane@gmail.com</a></td>
+							<td>Pilates - Estética</td>
+							<td>
+								<ul class="personOptions inlineMenu">
+									<li><a href="#" class="btn" data-personAction="view">Ver</a></li>
+									<li><a href="#" class="btn" data-personAction="edit">Editar</a></li>
+									<li><a href="#" class="btn" data-personAction="archive">Archivar</a></li>
+									<li><a href="#" class="btn" data-personAction="remove">Eliminar</a></li>
+								</ul>
+							</td>
+						</tr>
+						<!-- /Person IN list -->
+					</tbody>
+				</table>
+			</div>
+			<!-- /Persons List -->
+			<!-- Config -->
+			<div id="config" class="page hide">
+				<h2>Configurar el sistema</h2>
+			</div>
+			<!-- /Config -->
+		</div>
+	</div>
+</body>
+</html>

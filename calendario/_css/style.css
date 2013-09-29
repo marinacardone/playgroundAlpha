@@ -1,0 +1,337 @@
+/* sass */
+/* cyan */
+/* cyan */
+/* dark grey */
+/* red */
+/* darkest grey */
+/* light grey */
+/* light green */
+/* light green */
+/* pink */
+/* dirty white */
+/* GENERAL */
+/* line 47, scss/style.scss */
+body {
+  background: #f6f6f6;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  padding-bottom: 30px;
+}
+
+/* line 53, scss/style.scss */
+header {
+  height: 120px;
+  background: #299fe2;
+}
+/* line 57, scss/style.scss */
+header .brand {
+  float: left;
+  display: block;
+  margin-top: 20px;
+}
+/* line 62, scss/style.scss */
+header nav {
+  width: 480px;
+}
+/* line 66, scss/style.scss */
+header nav li {
+  height: 100px;
+  padding-top: 20px;
+}
+/* line 69, scss/style.scss */
+header nav li a {
+  display: block;
+  width: 120px;
+  text-align: center;
+  color: #f4f4f0;
+  text-decoration: none;
+  height: 100%;
+}
+/* line 77, scss/style.scss */
+header nav li:hover {
+  background: #6d6d6d;
+}
+/* line 80, scss/style.scss */
+header nav li.active {
+  background: #1a8dbe;
+}
+
+/* line 87, scss/style.scss */
+.hide {
+  display: none;
+}
+
+/* line 90, scss/style.scss */
+.disabled {
+  background: #deddd9;
+  color: #a0a0a0;
+}
+
+/* line 94, scss/style.scss */
+.inactive {
+  color: #a0a0a0;
+}
+
+/* line 97, scss/style.scss */
+.btn {
+  display: block;
+  background: #deddd9;
+  padding: 7px 10px;
+  color: #2b2f2a;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  text-decoration: none;
+  float: left;
+}
+
+/* text */
+/* line 103, scss/style.scss */
+h2 {
+  font-size: 2.2em;
+  margin: 10px 0;
+  color: #2b2f2a;
+  text-shadow: 1px 1px 3px #a0a0a0;
+  filter: dropshadow(color=#a0a0a0, offx=1px, offy=1px);
+}
+
+/* line 109, scss/style.scss */
+h3 {
+  font-size: 1.8em;
+  text-shadow: 1px 1px 1px #a0a0a0;
+  filter: dropshadow(color=#a0a0a0, offx=1px, offy=1px);
+}
+
+/* icons */
+/* line 114, scss/style.scss */
+i {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 10px auto;
+  background: url("../_img/glyphicons-halflings-white.png");
+}
+
+/* line 121, scss/style.scss */
+.icon-calendar {
+  background-position: -20px 0;
+}
+
+/* line 124, scss/style.scss */
+.icon-config {
+  background-position: -40px 0;
+}
+
+/* structure */
+/* line 129, scss/style.scss */
+.content {
+  width: 98%;
+  margin: 40px auto;
+}
+
+/* line 133, scss/style.scss */
+.row {
+  overflow: hidden;
+}
+
+/* line 136, scss/style.scss */
+[class*="column"] {
+  float: left;
+}
+
+/* line 139, scss/style.scss */
+.column2 {
+  width: 50%;
+}
+
+/* line 142, scss/style.scss */
+.column3 {
+  width: 33%;
+}
+
+/* navs and menus */
+/* line 147, scss/style.scss */
+.inlineMenu li {
+  display: inline-block;
+  margin-left: -4px;
+}
+
+/* tables */
+/* line 152, scss/style.scss */
+table {
+  width: 100%;
+}
+
+/* line 155, scss/style.scss */
+thead {
+  border-bottom: 1px solid #a0a0a0;
+}
+
+/* line 158, scss/style.scss */
+td {
+  padding: 6px;
+}
+
+/* forms */
+/* line 162, scss/style.scss */
+label, input {
+  float: left;
+}
+
+/* line 165, scss/style.scss */
+label {
+  width: 100%;
+}
+
+/* HOME */
+/* line 170, scss/style.scss */
+#home {
+  min-height: 300px;
+}
+/* line 172, scss/style.scss */
+#home a {
+  display: block;
+  padding: 260px 0;
+  text-decoration: none;
+}
+/* line 176, scss/style.scss */
+#home a h2 {
+  text-align: center;
+  color: #f4f4f0;
+  background: rgba(40, 40, 40, 0.7);
+  padding: 10px 0;
+}
+
+/* line 184, scss/style.scss */
+.pilatesIntro {
+  background: url("../_img/pilates_banner.jpg") 0 0 no-repeat;
+}
+
+/* line 187, scss/style.scss */
+.kinesioIntro {
+  background: url("../_img/kinesio_banner.jpg") 0 0 no-repeat;
+}
+
+/* CALENDAR */
+/* line 192, scss/style.scss */
+.tableTools {
+  overflow: hidden;
+  margin: 30px 0 20px;
+  border-bottom: 1px solid #deddd9;
+  padding-bottom: 10px;
+  font-size: 0.8em;
+}
+/* line 197, scss/style.scss */
+.tableTools .calControl {
+  float: left;
+}
+/* line 201, scss/style.scss */
+.tableTools li {
+  margin: 0;
+  padding: 0;
+}
+/* line 203, scss/style.scss */
+.tableTools li a {
+  display: block;
+  background: #deddd9;
+  padding: 10px 12px;
+  color: #2b2f2a;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  text-decoration: none;
+}
+/* line 207, scss/style.scss */
+.tableTools h3 {
+  width: 300px;
+  margin: 20px 0 0 25%;
+  text-align: center;
+  float: left;
+  font-size: 1.5em;
+}
+
+/* line 215, scss/style.scss */
+.calendarWrapper {
+  width: 100%;
+}
+/* line 219, scss/style.scss */
+.calendarWrapper table {
+  width: 100%;
+}
+/* line 28, scss/style.scss */
+.calendarWrapper table tr:nth-child(even) {
+  background: #f4f4f0;
+}
+/* line 223, scss/style.scss */
+.calendarWrapper table th {
+  padding: 10px 0;
+}
+/* line 226, scss/style.scss */
+.calendarWrapper table td:not(.hour) {
+  width: 13.28571%;
+  border-left: 1px solid #deddd9;
+  border-bottom: 1px solid #deddd9;
+}
+/* line 231, scss/style.scss */
+.calendarWrapper table td.unavailable.disabled {
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 235, scss/style.scss */
+.calendarWrapper table .noWork {
+  background: #edacac;
+  color: rgba 187, 12, 12, 1;
+}
+
+/* line 241, scss/style.scss */
+.hour {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 245, scss/style.scss */
+.personModule {
+  padding: 2px;
+}
+/* line 247, scss/style.scss */
+.personModule span {
+  font-size: 0.8em;
+  color: #a0a0a0;
+}
+/* line 251, scss/style.scss */
+.personModule input {
+  float: right;
+}
+/* line 254, scss/style.scss */
+.personModule a {
+  color: #2b2f2a;
+}
+
+/* line 258, scss/style.scss */
+.present {
+  background: #dcf0d5;
+}
+
+/* PERSON PAGE */
+/* line 263, scss/style.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 266, scss/style.scss */
+dd {
+  margin-bottom: 20px;
+}
+
+/* PERSONS DIRECTORY */
+/* line 28, scss/style.scss */
+.peopleDirectory tr:nth-child(even) {
+  background: #f4f4f0;
+}
+
+/* overwrites */
+/* line 277, scss/style.scss */
+.right {
+  float: right;
+}

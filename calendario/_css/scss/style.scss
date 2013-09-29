@@ -1,0 +1,279 @@
+/* sass */
+@mixin noSpacing{
+	margin:0;
+	padding:0;
+}
+@mixin inlineList{
+	display:inline-block;
+	margin-left:-4px;
+}
+@mixin textShadow($shadowVertical, $shadowHorizontal, $shadowBlur, $shadowColor){
+	text-shadow: $shadowVertical $shadowHorizontal $shadowBlur $shadowColor;
+	filter: dropshadow(color=$shadowColor, offx=$shadowVertical, offy=$shadowHorizontal);
+}
+@mixin rounded($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+@mixin buttons($vertPadding, $horPadding){
+	display:block;
+	background:$bgDisabled;
+	padding:$vertPadding $horPadding;
+	color: $textMainColor;
+	@include rounded(4px);
+	text-decoration:none;
+}
+@mixin zebraTable{
+	tr:nth-child(even){
+		background:$zebra;
+	}
+}
+
+$colorMain1: rgba(41, 159, 226, 1); /* cyan */
+$colorMain1Lighten: rgba(41, 171, 226, 1); /* cyan */
+$colorDisabled: rgba(160, 160, 160, 1); /* dark grey */
+$colorAlert: rgba (187,12,12,1); /* red */
+$textMainColor: rgba(43,47,42,1); /* darkest grey */
+$bgDisabled: rgba(222,221,217, 1); /* light grey */
+$bgPresent: rgba(220,240,213, 1); /* light green */
+$bgShadow: rgba(40,40,40, 0.7); /* light green */
+$bgAlert: rgba(237,172,172,1); /* pink */
+$zebra: rgba(244,244,240,1); /* dirty white */
+$fontNote: 0.8em;
+$headerTopSpace:20px;
+
+/* GENERAL */
+body{
+	background:#f6f6f6;
+	@include noSpacing;
+	font-family:Helvetica;
+	padding-bottom:30px;
+}
+header{
+	$headerHeight:120px;
+	height:$headerHeight;
+	background: $colorMain1;
+	.brand{
+		float: left;
+		display: block;
+		margin-top:$headerTopSpace;
+	}
+	nav{
+		$mainNavW: 480px;
+		$mainNavOpts: 4;
+		width: $mainNavW;
+		li{ 
+			height: $headerHeight - $headerTopSpace;
+			padding-top:$headerTopSpace;
+			a{
+				display: block;
+				width: $mainNavW/$mainNavOpts;
+				text-align: center;
+				color:$zebra;
+				text-decoration: none;
+				height:100%;
+			}
+			&:hover{
+				background:darken($colorDisabled, 20%);
+			}
+			&.active{
+				background:darken($colorMain1Lighten, 10%);
+			}
+		}
+	}
+}
+
+.hide{
+	display:none;
+}
+.disabled{
+	background:$bgDisabled;
+	color:$colorDisabled;
+}
+.inactive{
+	color:$colorDisabled;
+}
+.btn{
+	@include buttons(7px, 10px);
+	float: left;
+}
+
+/* text */
+h2{
+	font-size: 2.2em;
+	margin: 10px 0;
+	color:$textMainColor;
+	@include textShadow(1px, 1px, 3px, $colorDisabled);
+}
+h3{
+	font-size:1.8em;
+	@include textShadow(1px, 1px, 1px, $colorDisabled);
+}
+/* icons */
+i{
+	display:block;
+	width:20px;
+	height:20px;
+	margin:10px auto;
+	background:url("../_img/glyphicons-halflings-white.png");
+}
+.icon-calendar{
+	background-position: -20px 0;
+}
+.icon-config{
+	background-position:-40px 0;
+}
+
+/* structure */
+.content{
+	width:98%;
+	margin:40px auto;
+}
+.row{
+	overflow: hidden;
+}
+[class*="column"] {
+  float: left;
+}
+.column2{
+	width:50%;
+}
+.column3{
+	width:33%;
+}
+
+/* navs and menus */
+.inlineMenu li{
+	@include inlineList;
+}
+
+/* tables */
+table{
+	width:100%;
+}
+thead{
+	border-bottom: 1px solid $colorDisabled;
+}
+td{
+	padding: 6px;
+}
+/* forms */
+label, input{
+	float: left;
+}
+label{
+	width:100%;
+}
+
+/* HOME */
+#home{
+	min-height:300px;
+	a{
+		display:block;
+		padding:260px 0;
+		text-decoration: none;
+		h2{
+			text-align: center;
+			color:$zebra;
+			background:$bgShadow;
+			padding:10px 0;
+		}	
+	}
+}
+.pilatesIntro{
+	background:url('../_img/pilates_banner.jpg') 0 0 no-repeat;
+}
+.kinesioIntro{
+	background:url('../_img/kinesio_banner.jpg') 0 0 no-repeat;
+}
+
+/* CALENDAR */
+.tableTools{
+	overflow: hidden;
+	margin:30px 0 20px;
+	border-bottom: 1px solid $bgDisabled;
+	padding-bottom:10px;
+	.calControl{
+		float: left;
+	}
+	font-size:$fontNote;
+	li{
+		@include noSpacing;
+		a{
+			@include buttons(10px, 12px);
+		}
+	}
+	h3{
+		width: 300px;
+		margin:20px 0 0 25%;
+		text-align: center;
+		float: left;
+		font-size:1.5em;
+	}
+}
+.calendarWrapper{
+	$calWidth:100%;
+	width: $calWidth;
+	
+	table{	
+		$days:7;
+		width: $calWidth;
+		@include zebraTable;
+		th{
+			padding:10px 0;
+		}
+		td:not(.hour){
+			width: $calWidth/$days - 1%;
+			border-left:1px solid $bgDisabled;
+			border-bottom: 1px solid $bgDisabled;
+		}
+		td.unavailable.disabled{
+			text-align:center;
+			vertical-align: middle;
+		}
+		.noWork{
+			background: $bgAlert;
+			color: $colorAlert;
+		}
+	}
+}
+.hour{
+	vertical-align:middle;
+	text-align:center;
+}
+.personModule{
+	padding: 2px;
+	span{
+		font-size: $fontNote;
+		color: $colorDisabled;
+	}
+	input{
+		float: right;
+	}
+	a{
+		color: $textMainColor;
+	}
+}
+.present{
+	background: $bgPresent;
+}
+
+/* PERSON PAGE */
+dt{
+	font-weight:bold;
+}
+dd{
+	margin-bottom: $headerTopSpace;
+}
+
+
+/* PERSONS DIRECTORY */
+.peopleDirectory{
+	@include zebraTable;
+}
+
+/* overwrites */
+.right{
+	float: right;
+}

@@ -23,6 +23,7 @@
 	color: $textMainColor;
 	@include rounded(4px);
 	text-decoration:none;
+	border:none;
 }
 @mixin zebraTable{
 	tr:nth-child(even){
@@ -98,6 +99,10 @@ header{
 	@include buttons(7px, 10px);
 	float: left;
 }
+hr{
+	border:none;
+	border-bottom: 1px solid $bgDisabled;
+}
 
 /* text */
 h2{
@@ -107,8 +112,8 @@ h2{
 	@include textShadow(1px, 1px, 3px, $colorDisabled);
 }
 h3{
-	font-size:1.8em;
-	@include textShadow(1px, 1px, 1px, $colorDisabled);
+	font-size:1.6em;
+	margin: 10px 0;
 }
 /* icons */
 i{
@@ -140,7 +145,12 @@ i{
 	width:50%;
 }
 .column3{
-	width:33%;
+	width:32%;
+	padding-right:1%;
+}
+.column3:last-child{
+	width:34%;
+	padding-right:0;
 }
 
 /* navs and menus */
@@ -159,11 +169,34 @@ td{
 	padding: 6px;
 }
 /* forms */
+fieldset{
+	margin-bottom:$headerTopSpace;
+	padding-bottom:$headerTopSpace;
+	border-bottom: 1px solid $colorDisabled;
+	float: left;
+}
+legend{
+	font-size:1.4em;
+	margin-bottom: $headerTopSpace;
+}
 label, input{
 	float: left;
 }
 label{
 	width:100%;
+}
+input[type="text"], 
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="tel"]{
+	padding:4px 6px;
+	border: 1px solid $bgDisabled;
+	width:260px;
+	margin-bottom:10px;
+	font-size:0.9em;
+	color:$colorDisabled;
+	font-family:Helvetica;
 }
 
 /* HOME */
@@ -266,7 +299,11 @@ dt{
 dd{
 	margin-bottom: $headerTopSpace;
 }
-
+.actOptions{
+	label{
+		margin-bottom: 10px;
+	}
+}
 
 /* PERSONS DIRECTORY */
 .peopleDirectory{

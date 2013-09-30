@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
-	<title>Sistema de gestión de centro de estética y pilates</title>
+	<title>Prototipo - Sistema de gestión</title>
 	<link rel="stylesheet" href="_css/reset.css" />
 	<link rel="stylesheet" href="_css/style.css" />
 	<script type="text/javascript" src="_js/jquery-1.10.2.min.js"></script>
@@ -33,20 +34,20 @@
 			</nav>
 		</header>
 		<!-- /header -->
-					<!-- Home -->
-			<div id="home" class="page">
-				<div class="column2 pilatesIntro">
-					<a href="#calendarPilates">
-						<h2>Pilates</h2>
-					</a>
-				</div>
-				<div class="column2 kinesioIntro">
-					<a href="#calendarKinesio">
-						<h2>Estética</h2>
-					</a>
-				</div>
+		<!-- Home -->
+		<div id="home" class="page">
+			<div class="column2 pilatesIntro">
+				<a href="#calendarPilates">
+					<h2>Pilates</h2>
+				</a>
 			</div>
-			<!-- /Home -->
+			<div class="column2 kinesioIntro">
+				<a href="#calendarKinesio">
+					<h2>Estética</h2>
+				</a>
+			</div>
+		</div>
+		<!-- /Home -->
 		<div class="content">
 			<!-- persons -->
 			<div id="person" class="page hide">
@@ -56,6 +57,7 @@
 						<li><a href="#" class="btn">Ver turnos</a></li>
 						<li><a href="#" class="btn alert">Eliminar</a></li>
 					</ul>
+					<hr />
 					<!-- Personal info -->
 					<div class="column3">
 						<div id="personalInfo">
@@ -79,24 +81,43 @@
 								<dt>Teléfono Fijo</dt>
 								<dd>444-2211</dd>
 							</dl>
+							<h3>Actividades</h3>
+							<dl>
+								<dt>Pilates</dt>
+								<dd>
+									<ul>
+										<li>Lunes - 20hs</li>
+										<li>Miércoles - 20hs</li>
+										<li>Viernes - 20hs</li>
+									</ul>
+									<span class="expiration">Vencimiento: 25/10/2013</span>
+								</dd>
+								<dt>Tratamiento: Combo 1</dt>
+								<dd>
+									<ul>
+										<li>Miércoles 19hs</li>
+									</ul>
+									<span class="expiration">Vencimiento: 25/10/2013</span>
+								</dd>
+							</dl>
 							<a href="#" class="btn" data-sectionToggle='editPerson'>Editar</a>
 						</div>
-						<div id="editPerson">
+						<div id="editPerson" class="hide">
 							<h2>Editar: <span id="personId">Jane Doe</span></h2>
-							<form action="#" id="personEditor">
+							<form action="" id="personEditor">
 								<fieldset>
 									<legend>Datos personales</legend>
 									<label for="name">Nombre</label>
-									<input type="text" id="name" name="name" required />
+									<input type="text" id="name" name="name" />
 									<label for="lastName">Apellido</label>
-									<input type="text" id="lastName" name="lastName" required />
+									<input type="text" id="lastName" name="lastName" />
 									<label for="dob">Fecha de nacimiento</label>
 									<input type="date" id="dob" name="dob" />
 								</fieldset>
 								<fieldset>
 									<legend>Datos de contacto</legend>
 									<label for="mobile">Teléfono celular</label>
-									<input type="tel" id="mobile" name="mobile" required/>
+									<input type="tel" id="mobile" name="mobile"/>
 									<label for="email">Email</label>
 									<input type="email" id="email" name="email" />
 									<label for="phone">Otro teléfono</label>
@@ -105,19 +126,19 @@
 								<fieldset>
 									<legend>Actividades</legend>
 									<label for="personPilates"><input type="checkbox" id="personPilates" name="personPilates" />Pilates</label>
-									<div class="pilatesOptions">
+									<div class="actOptions pilatesOptions">
 										<label for="pilates1Week"><input type="radio" id="pilates1Week" name="pilates1Week" />1 vez por semana</label>
 										<label for="pilates2Week"><input type="radio" id="pilates2Week" name="pilates2Week" />2 veces por semana</label>
 										<label for="pilates3Week"><input type="radio" id="pilates3Week" name="pilates3Week" />3 veces por semana</label>
 									</div>
 									<label for="personKinesio"><input type="checkbox" id="personKinesio" name="personKinesio" />Tratamientos</label>
-									<div class="kinesioOptions">
+									<div class="actOptions kinesioOptions">
 										<label for="combo1"><input type="checkbox" id="combo1" name="combo1" />Combo 1: Ondas Rusas + Radiofrecuencia x 4</label>
 										<label for="combo2"><input type="checkbox" id="combo2" name="combo2" />Combo 1: Ondas Rusas + Radiofrecuencia x 10</label>
 										<label for="ondasRusas"><input type="checkbox" id="ondasRusas" name="ondasRusas" />Ondas Rusas</label>
 									</div>
 								</fieldset>
-								<button type="submit" id="saveChanges" name="saveChanges">Guardar</button>
+								<button type="submit" name="saveChanges" class="btn">Guardar</button>
 							</form>
 						</div>
 					</div>
@@ -125,56 +146,55 @@
 					<!-- Fisical condition -->
 					<div id="kinesio" class="column3">
 						<h2>Condición física</h2>
-						<section>
-							<h1>Problemas médicos</h1>
-							<span class="fecha">20/04/2013</span>
-							<p>Ninguno</p>
-						</section>
-						<section>
-							<h1>Medidas</h1>
-							<table>
-								<thead>
-									<tr>
-										<th>Medida</th>
-										<th>Abril 13</th>
-										<th>Mayo 13</th>
-										<th>Junio 13</th>
-									</tr>	
-								</thead>
-								<tbody>
-									<tr>
-										<td class="def">Cintura</td>
-										<td>63</td>
-										<td>62.3</td>
-										<td>61</td>
-									</tr>
-									<tr>
-										<td class="def">Cadera</td>
-										<td>105</td>
-										<td>102</td>
-										<td>97</td>
-									</tr>
-									<tr>
-										<td class="def">Cola</td>
-										<td>98</td>
-										<td>99</td>
-										<td>97</td>
-									</tr>
-									<tr>
-										<td class="def">Muslo der</td>
-										<td>54</td>
-										<td>53</td>
-										<td>53</td>
-									</tr>
-									<tr>
-										<td class="def">Muslo izq</td>
-										<td>55</td>
-										<td>54</td>
-										<td>52</td>
-									</tr>
-								</tbody>
-							</table>
-						</section>
+						
+						<h3>Problemas médicos</h3>
+						<span class="fecha">20/04/2013</span>
+						<p>Ninguno</p>
+						<hr />
+						<h3>Medidas</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Medida</th>
+									<th>Abril 13</th>
+									<th>Mayo 13</th>
+									<th>Junio 13</th>
+								</tr>	
+							</thead>
+							<tbody>
+								<tr>
+									<td class="def">Cintura</td>
+									<td>63</td>
+									<td>62.3</td>
+									<td>61</td>
+								</tr>
+								<tr>
+									<td class="def">Cadera</td>
+									<td>105</td>
+									<td>102</td>
+									<td>97</td>
+								</tr>
+								<tr>
+									<td class="def">Cola</td>
+									<td>98</td>
+									<td>99</td>
+									<td>97</td>
+								</tr>
+								<tr>
+									<td class="def">Muslo der</td>
+									<td>54</td>
+									<td>53</td>
+									<td>53</td>
+								</tr>
+								<tr>
+									<td class="def">Muslo izq</td>
+									<td>55</td>
+									<td>54</td>
+									<td>52</td>
+								</tr>
+							</tbody>
+						</table>
+						
 					</div>
 					<!-- /Fisical condition -->
 					<!-- Payments -->
@@ -216,6 +236,7 @@
 					</div>
 					<!-- /Payments -->
 				</div>
+				<hr/>
 				<!-- History -->
 				<div id="history">
 					<h2>Historial</h2>

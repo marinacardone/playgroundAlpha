@@ -10,7 +10,7 @@
 /* pink */
 /* dirty white */
 /* GENERAL */
-/* line 47, scss/style.scss */
+/* line 48, scss/style.scss */
 body {
   background: #f6f6f6;
   margin: 0;
@@ -19,27 +19,27 @@ body {
   padding-bottom: 30px;
 }
 
-/* line 53, scss/style.scss */
+/* line 54, scss/style.scss */
 header {
   height: 120px;
   background: #299fe2;
 }
-/* line 57, scss/style.scss */
+/* line 58, scss/style.scss */
 header .brand {
   float: left;
   display: block;
   margin-top: 20px;
 }
-/* line 62, scss/style.scss */
+/* line 63, scss/style.scss */
 header nav {
   width: 480px;
 }
-/* line 66, scss/style.scss */
+/* line 67, scss/style.scss */
 header nav li {
   height: 100px;
   padding-top: 20px;
 }
-/* line 69, scss/style.scss */
+/* line 70, scss/style.scss */
 header nav li a {
   display: block;
   width: 120px;
@@ -48,32 +48,32 @@ header nav li a {
   text-decoration: none;
   height: 100%;
 }
-/* line 77, scss/style.scss */
+/* line 78, scss/style.scss */
 header nav li:hover {
   background: #6d6d6d;
 }
-/* line 80, scss/style.scss */
+/* line 81, scss/style.scss */
 header nav li.active {
   background: #1a8dbe;
 }
 
-/* line 87, scss/style.scss */
+/* line 88, scss/style.scss */
 .hide {
   display: none;
 }
 
-/* line 90, scss/style.scss */
+/* line 91, scss/style.scss */
 .disabled {
   background: #deddd9;
   color: #a0a0a0;
 }
 
-/* line 94, scss/style.scss */
+/* line 95, scss/style.scss */
 .inactive {
   color: #a0a0a0;
 }
 
-/* line 97, scss/style.scss */
+/* line 98, scss/style.scss */
 .btn {
   display: block;
   background: #deddd9;
@@ -83,11 +83,18 @@ header nav li.active {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   text-decoration: none;
+  border: none;
   float: left;
 }
 
+/* line 102, scss/style.scss */
+hr {
+  border: none;
+  border-bottom: 1px solid #deddd9;
+}
+
 /* text */
-/* line 103, scss/style.scss */
+/* line 108, scss/style.scss */
 h2 {
   font-size: 2.2em;
   margin: 10px 0;
@@ -96,15 +103,14 @@ h2 {
   filter: dropshadow(color=#a0a0a0, offx=1px, offy=1px);
 }
 
-/* line 109, scss/style.scss */
+/* line 114, scss/style.scss */
 h3 {
-  font-size: 1.8em;
-  text-shadow: 1px 1px 1px #a0a0a0;
-  filter: dropshadow(color=#a0a0a0, offx=1px, offy=1px);
+  font-size: 1.6em;
+  margin: 10px 0;
 }
 
 /* icons */
-/* line 114, scss/style.scss */
+/* line 119, scss/style.scss */
 i {
   display: block;
   width: 20px;
@@ -113,89 +119,125 @@ i {
   background: url("../_img/glyphicons-halflings-white.png");
 }
 
-/* line 121, scss/style.scss */
+/* line 126, scss/style.scss */
 .icon-calendar {
   background-position: -20px 0;
 }
 
-/* line 124, scss/style.scss */
+/* line 129, scss/style.scss */
 .icon-config {
   background-position: -40px 0;
 }
 
 /* structure */
-/* line 129, scss/style.scss */
+/* line 134, scss/style.scss */
 .content {
   width: 98%;
   margin: 40px auto;
 }
 
-/* line 133, scss/style.scss */
+/* line 138, scss/style.scss */
 .row {
   overflow: hidden;
 }
 
-/* line 136, scss/style.scss */
+/* line 141, scss/style.scss */
 [class*="column"] {
   float: left;
 }
 
-/* line 139, scss/style.scss */
+/* line 144, scss/style.scss */
 .column2 {
   width: 50%;
 }
 
-/* line 142, scss/style.scss */
+/* line 147, scss/style.scss */
 .column3 {
-  width: 33%;
+  width: 32%;
+  padding-right: 1%;
+}
+
+/* line 151, scss/style.scss */
+.column3:last-child {
+  width: 34%;
+  padding-right: 0;
 }
 
 /* navs and menus */
-/* line 147, scss/style.scss */
+/* line 157, scss/style.scss */
 .inlineMenu li {
   display: inline-block;
   margin-left: -4px;
 }
 
 /* tables */
-/* line 152, scss/style.scss */
+/* line 162, scss/style.scss */
 table {
   width: 100%;
 }
 
-/* line 155, scss/style.scss */
+/* line 165, scss/style.scss */
 thead {
   border-bottom: 1px solid #a0a0a0;
 }
 
-/* line 158, scss/style.scss */
+/* line 168, scss/style.scss */
 td {
   padding: 6px;
 }
 
 /* forms */
-/* line 162, scss/style.scss */
+/* line 172, scss/style.scss */
+fieldset {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #a0a0a0;
+  float: left;
+}
+
+/* line 178, scss/style.scss */
+legend {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+
+/* line 182, scss/style.scss */
 label, input {
   float: left;
 }
 
-/* line 165, scss/style.scss */
+/* line 185, scss/style.scss */
 label {
   width: 100%;
 }
 
+/* line 192, scss/style.scss */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="tel"] {
+  padding: 4px 6px;
+  border: 1px solid #deddd9;
+  width: 260px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #a0a0a0;
+  font-family: Helvetica;
+}
+
 /* HOME */
-/* line 170, scss/style.scss */
+/* line 203, scss/style.scss */
 #home {
   min-height: 300px;
 }
-/* line 172, scss/style.scss */
+/* line 205, scss/style.scss */
 #home a {
   display: block;
   padding: 260px 0;
   text-decoration: none;
 }
-/* line 176, scss/style.scss */
+/* line 209, scss/style.scss */
 #home a h2 {
   text-align: center;
   color: #f4f4f0;
@@ -203,18 +245,18 @@ label {
   padding: 10px 0;
 }
 
-/* line 184, scss/style.scss */
+/* line 217, scss/style.scss */
 .pilatesIntro {
   background: url("../_img/pilates_banner.jpg") 0 0 no-repeat;
 }
 
-/* line 187, scss/style.scss */
+/* line 220, scss/style.scss */
 .kinesioIntro {
   background: url("../_img/kinesio_banner.jpg") 0 0 no-repeat;
 }
 
 /* CALENDAR */
-/* line 192, scss/style.scss */
+/* line 225, scss/style.scss */
 .tableTools {
   overflow: hidden;
   margin: 30px 0 20px;
@@ -222,16 +264,16 @@ label {
   padding-bottom: 10px;
   font-size: 0.8em;
 }
-/* line 197, scss/style.scss */
+/* line 230, scss/style.scss */
 .tableTools .calControl {
   float: left;
 }
-/* line 201, scss/style.scss */
+/* line 234, scss/style.scss */
 .tableTools li {
   margin: 0;
   padding: 0;
 }
-/* line 203, scss/style.scss */
+/* line 236, scss/style.scss */
 .tableTools li a {
   display: block;
   background: #deddd9;
@@ -241,8 +283,9 @@ label {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   text-decoration: none;
+  border: none;
 }
-/* line 207, scss/style.scss */
+/* line 240, scss/style.scss */
 .tableTools h3 {
   width: 300px;
   margin: 20px 0 0 25%;
@@ -251,87 +294,92 @@ label {
   font-size: 1.5em;
 }
 
-/* line 215, scss/style.scss */
+/* line 248, scss/style.scss */
 .calendarWrapper {
   width: 100%;
 }
-/* line 219, scss/style.scss */
+/* line 252, scss/style.scss */
 .calendarWrapper table {
   width: 100%;
 }
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 .calendarWrapper table tr:nth-child(even) {
   background: #f4f4f0;
 }
-/* line 223, scss/style.scss */
+/* line 256, scss/style.scss */
 .calendarWrapper table th {
   padding: 10px 0;
 }
-/* line 226, scss/style.scss */
+/* line 259, scss/style.scss */
 .calendarWrapper table td:not(.hour) {
   width: 13.28571%;
   border-left: 1px solid #deddd9;
   border-bottom: 1px solid #deddd9;
 }
-/* line 231, scss/style.scss */
+/* line 264, scss/style.scss */
 .calendarWrapper table td.unavailable.disabled {
   text-align: center;
   vertical-align: middle;
 }
-/* line 235, scss/style.scss */
+/* line 268, scss/style.scss */
 .calendarWrapper table .noWork {
   background: #edacac;
   color: rgba 187, 12, 12, 1;
 }
 
-/* line 241, scss/style.scss */
+/* line 274, scss/style.scss */
 .hour {
   vertical-align: middle;
   text-align: center;
 }
 
-/* line 245, scss/style.scss */
+/* line 278, scss/style.scss */
 .personModule {
   padding: 2px;
 }
-/* line 247, scss/style.scss */
+/* line 280, scss/style.scss */
 .personModule span {
   font-size: 0.8em;
   color: #a0a0a0;
 }
-/* line 251, scss/style.scss */
+/* line 284, scss/style.scss */
 .personModule input {
   float: right;
 }
-/* line 254, scss/style.scss */
+/* line 287, scss/style.scss */
 .personModule a {
   color: #2b2f2a;
 }
 
-/* line 258, scss/style.scss */
+/* line 291, scss/style.scss */
 .present {
   background: #dcf0d5;
 }
 
 /* PERSON PAGE */
-/* line 263, scss/style.scss */
+/* line 296, scss/style.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 266, scss/style.scss */
+/* line 299, scss/style.scss */
 dd {
   margin-bottom: 20px;
 }
 
+/* line 303, scss/style.scss */
+.actOptions label {
+  margin-bottom: 10px;
+}
+
 /* PERSONS DIRECTORY */
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 .peopleDirectory tr:nth-child(even) {
   background: #f4f4f0;
 }
 
 /* overwrites */
-/* line 277, scss/style.scss */
+/* line 314, scss/style.scss */
 .right {
   float: right;
 }

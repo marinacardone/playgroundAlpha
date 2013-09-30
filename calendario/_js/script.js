@@ -69,5 +69,16 @@ $(document).ready(function(){
 
 	$('.personModule :checkbox').on('change',function(){
 		$(this).parent().toggleClass('present');
+	});
+
+	$('#personalInfo a[data-sectiontoggle="editPerson"]').on('click',function(){
+		$('#personalInfo').addClass('hide');
+		$('#editPerson').removeClass('hide');
+	});
+
+	$('#personEditor').on('submit',function(event){
+		event.preventDefault();
+		$('#personalInfo').removeClass('hide');
+		$('#editPerson').addClass('hide');
 	})
 });
